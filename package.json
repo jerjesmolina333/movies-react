@@ -1,5 +1,6 @@
 {
   "name": "movies-react",
+  "homepage":"https://github.com/jerjesmolina333/movies-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -39,4 +40,5 @@
       "last 1 safari version"
     ]
   }
+  
 }

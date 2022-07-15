@@ -6,13 +6,10 @@ import { Spinner } from "./Spinner";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Empty } from "./Empty";
 
-
-
 export function MoviesGrid( { search} ) {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(true);
 
   useEffect(() => {
     setIsLoading(true);
@@ -21,7 +18,7 @@ export function MoviesGrid( { search} ) {
       : "/discover/movie?page=" + page;
       get(searchUrl).then((data) => {
           setMovies((prevMovies) => prevMovies.concat(data.results));
-          setHasMore(data.page < data.total_pages);
+          // setHasMore(data.page < data.total_pages);
           setIsLoading(false);
       });   
   }, [search, page]);
