@@ -4,7 +4,6 @@ import {FaSearch} from "react-icons/fa";
 import { useNavigate } from "react-router";
 import useQuery from "../hooks/useQuery";
 
-
 export function Search() {
     const navigate = useNavigate();
     const query = useQuery();
