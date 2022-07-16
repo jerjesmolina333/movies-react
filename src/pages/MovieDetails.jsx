@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Spinner } from "../components/Spinner";
 import { getMovieImg } from "../utils/getMovieImg";
-import { get } from "../utils/httpClient";
+import { obtenPath } from "../utils/httpClient";
 import styles from "./MovieDetails.module.css";
 
 export function MovieDetails() {
@@ -15,7 +15,7 @@ export function MovieDetails() {
 
     useEffect(() => {
         setIsLoading(true);
-        get("/movie/" + movieId).then(data => {
+        obtenPath("/movie/" + movieId).then(data => {
             setIsLoading(false);
             setMovie(data);
         });
