@@ -4,9 +4,11 @@ const APIEXT="https://api.themoviedb.org/3";
 const API_TOKEN="eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4N2U2NmQzMzZhOWE1ODYyYzkyODc3YzdlNDI1MGRhYSIsInN1YiI6IjYyYmY5MDIyYWY2ZTk0MDQ2YzcwODFhYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-rMNhweMKfrJvaOsSQ8C48YCA7OwjychohwZ2ljJ_rk";
 
 
+
+
+
+
 export function obtenPath(path) {
-  {console.log("9-El valor de API_TOKEN es."+API_TOKEN);}
-  {console.log("El valor de la variable APIEXT es:"+APIEXT);}
     return fetch(APIEXT + path, {
       headers: {
         Authorization:
@@ -14,4 +16,4 @@ export function obtenPath(path) {
         "Content-Type": "application/json;charset=utf-8"
       },
     }).then((result) => result.json());
-}
+  };
